@@ -1,0 +1,3 @@
+#define AUTHOR "@AUTHOR@"
+#define RELEASE_DATE "@RELEASE_DATE@"
+#define USE_MY_LIB @USE_MY_LIB@

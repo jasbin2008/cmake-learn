@@ -1,0 +1,16 @@
+find_path(LIBXML2_INCLUDE_DIR xmlmemory.h /usr/local/include/libxml2/libxml)
+find_library(LIBXML2_LIBRARY NAMES libxml2.so PATH /usr/local/lib)
+
+if(LIBXML2_INCLUDE_DIR AND LIBXML2_LIBRARY)
+    set(LIBXML2_FOUND TRUE)
+endif(LIBXML2_INCLUDE_DIR AND LIBXML2_LIBRARY)
+
+if (LIBXML2_FOUND)
+    if(NOT LIBXML2_FOUND_QUIETLY)
+        message(STATUS "Found Hello: ${LIBXML2_LIBRARY}")
+    endif(NOT LIBXML2_FOUND_QUIETLY)
+else(LIBXML2_FOUND)
+    if(LIBXML2_FOUND_QUIETLY)
+        message(FATAL_ERROR "Could not find hello library")
+    endif(LIBXML2_FOUND_QUIETLY)
+endif(LIBXML2_FOUND)
